@@ -3,6 +3,8 @@ const app = express();
 const bodyParser = require("body-parser");
 
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
 
 // Routes
 const productsRoutes = require("./routes/Products");
@@ -10,7 +12,7 @@ const productsRoutes = require("./routes/Products");
 app.use("/products", productsRoutes);
 
 // 404 Handle
-app.use((req, res) => {
+app.use("*", (req, res) => {
   res.status(404).json({ msg: "mau kemana mazeh" });
 });
 
