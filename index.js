@@ -8,7 +8,8 @@ app.use(express.json());
 
 // Routes
 const productsRoutes = require("./routes/Products");
-
+const usersRoutes = require("./routes/Users");
+app.use("/users", usersRoutes);
 app.use("/products", productsRoutes);
 
 // 404 Handle

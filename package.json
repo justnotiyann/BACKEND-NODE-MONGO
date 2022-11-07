@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/justnotiyann/BACKEND-NODE-MONGO#readme",
   "dependencies": {
+    "argon2": "^0.30.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "mongoose": "^6.7.1"
